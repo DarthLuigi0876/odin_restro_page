@@ -1,0 +1,478 @@
+@font-face {
+    font-family: 'Cooper BT';
+    src: url('./fonts/CooperLtBT-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  
+  /* CSS Variables */
+:root {
+    --primary-green: #097d4c;
+    --cream-bg: #f1ead1;
+    --dark-green: #065536;
+    --light-green: #3ca37d;
+    --dark-text: #333333;
+    --light-text: #f8f5ed;
+    --description-text: #555555;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Cooper BT', serif;
+    background-color: var(--cream-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header & Navigation */
+  header {
+    padding: 20px 0;
+    background-color: var(--primary-green);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Cooper BT', serif;
+  }
+  
+  .left button img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .left button img:hover {
+    transform: scale(1.1);
+  }
+  
+  .right button {
+    color: var(--cream-bg);
+    font-size: 18px;
+    font-weight: normal;
+    margin-left: 30px;
+    padding: 8px 16px;
+    position: relative;
+  }
+  
+  .right button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--cream-bg);
+    transition: all 0.3s ease;
+  }
+  
+  .right button:hover {
+    color: var(--light-text);
+  }
+  
+  .right button:hover::after {
+    width: 80%;
+    left: 10%;
+  }
+  
+  /* Content Area */
+  #content {
+    padding: 40px 0;
+    min-height: calc(100vh - 100px);
+  }
+  
+  /* HOME PAGE STYLES */
+  .title {
+    font-family: 'Cooper BT', serif;
+    font-size: 3.5rem;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Home page container with description and burger image side by side */
+  .menucontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Left side content */
+  .menuitem {
+    flex: 1;
+    padding-right: 40px;
+  }
+  
+  /* Right side burger image container - assuming the last menuitem holds the image */
+  .menuitem:last-child {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+  }
+  
+  /* Styling for burger image */
+  .menuitem:last-child img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 8px 15px rgba(9, 125, 76, 0.2));
+    transition: transform 0.5s ease;
+  }
+  
+  .menuitem:last-child img:hover {
+    transform: scale(1.05) rotate(5deg);
+  }
+  
+  .menuitemtitle {
+    font-family: 'Cooper BT', serif;
+    color: var(--primary-green);
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  
+  .menuitemdescription {
+    color: var(--description-text);
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+  
+  .menuitemprice {
+    font-weight: bold;
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* Button for home page */
+  .home-cta-button {
+    background-color: var(--primary-green);
+    color: var(--cream-bg);
+    font-family: 'Cooper BT', serif;
+    font-size: 1.1rem;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(9, 125, 76, 0.2);
+    display: inline-block;
+    margin-top: 20px;
+  }
+  
+  .home-cta-button:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(9, 125, 76, 0.3);
+  }
+  
+  /* MENU PAGE STYLES */
+  .menu-logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .menu-logo {
+    width: 80px;
+    height: auto;
+  }
+  
+  .menu-head {
+    font-family: 'Cooper BT', serif;
+    font-size: 3rem;
+    color: var(--primary-green);
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-head::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background-color: var(--primary-green);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .menu-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border-left: 3px solid var(--primary-green);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .item-name {
+    font-family: 'Cooper BT', serif;
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+  
+  .item-description {
+    color: var(--description-text);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  
+  .item-price {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--primary-green);
+    align-self: flex-end;
+    font-family: 'Cooper BT', serif;
+    margin-top: auto;
+  }
+  
+  /* ABOUT PAGE STYLES */
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .about-title {
+    font-family: 'Cooper BT', serif;
+    color: var(--primary-green);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .about-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-green);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .about-section {
+    margin-bottom: 20px;
+  }
+  
+  .about-section h3 {
+    font-family: 'Cooper BT', serif;
+    color: var(--primary-green);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  
+  .about-section p {
+    color: var(--description-text);
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+  
+  /* Success message */
+  .success-message {
+    background-color: var(--light-green);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .success-message.show {
+    opacity: 1;
+  }
+  
+  /* Decorative elements */
+  .divider {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-green), transparent);
+    margin: 30px 0;
+  }
+  
+  .accent-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-green);
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.7;
+  }
+  
+  /* RESPONSIVE STYLES */
+  @media (max-width: 1024px) {
+    .menu-container {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .right button {
+      margin-left: 15px;
+      padding: 6px 10px;
+      font-size: 16px;
+    }
+    
+    .title {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    
+    .menu-head {
+      font-size: 2.2rem;
+    }
+    
+    .about-title {
+      font-size: 2.2rem;
+    }
+    
+    .menu-container {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .menucontainer {
+      flex-direction: column;
+      padding: 30px;
+    }
+    
+    .menuitem {
+      padding-right: 0;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .menuitem:last-child {
+      flex: 0 0 auto;
+      margin-bottom: 0;
+    }
+    
+    .menuitem:last-child img {
+      max-width: 70%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .right button {
+      margin-left: 8px;
+      padding: 5px 8px;
+      font-size: 14px;
+    }
+    
+    .title {
+      font-size: 2rem;
+    }
+    
+    .menu-head {
+      font-size: 1.8rem;
+    }
+    
+    .menu-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .about-container {
+      padding: 25px;
+    }
+    
+    .about-title {
+      font-size: 1.8rem;
+    }
+    
+    .menucontainer {
+      padding: 20px;
+    }
+  }
+  
+  /* Animation classes */
+  .fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+  }
+  
+  .slide-in {
+    animation: slideIn 0.8s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from { 
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
