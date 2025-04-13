@@ -1,5 +1,5 @@
 import './style.css';
-import burger from './images/burger.png';
+import burger from './assets/burger.png';
 
 export function loadHomepage(){
     const content = document.getElementById('content');
