@@ -41,6 +41,9 @@
     padding: 20px 0;
     background-color: var(--primary-green);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   
   nav {
@@ -475,4 +478,26 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  /* Footer styling */
+footer {
+    background-color: var(--primary-green);
+    color: var(--cream-bg);
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: 40px;
+  }
+  
+  footer a {
+    color: var(--cream-bg);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: white;
+    text-decoration: underline;
   }
